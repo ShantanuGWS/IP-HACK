@@ -5,12 +5,13 @@ import os
 import sys
 
 logo = """     
-                         ______        _____
-                        / ___\ \      / / ___| 
-                       | |  _ \ \ /\ / /\___ \ 
-                       | |_| | \ V  V /  ___) |
-                        \____|  \_/\_/  |____/ 
-                
+                ██████╗ ██╗    ██╗███████╗     ██╗  ██╗
+               ██╔════╝ ██║    ██║██╔════╝     ╚██╗██╔╝ 
+               ██║  ███╗██║ █╗ ██║███████╗█████╗╚███╔╝ 
+               ██║   ██║██║███╗██║╚════██║╚════╝██╔██╗ 
+               ╚██████╔╝╚███╔███╔╝███████║     ██╔╝ ██╗ 
+                ╚═════╝  ╚══╝╚══╝ ╚══════╝     ╚═╝  ╚═╝ 
+
 """
 
 red = "\033[91;1m"
@@ -31,7 +32,7 @@ def anime(text):
     sys.stdout.flush()
     time.sleep(0.03)
 
-golo = colorama.Fore.BLUE + logo
+golo = colorama.Fore.YELLOW + logo
 anime(golo)
 
 sp = ">> Script By Shantanu <<"
@@ -47,6 +48,7 @@ print(colorama.Back.RESET)
 import ipinfo
 
 def get_user_info_by_ip(ip_address, token):
+    time.sleep(2)
     # Initialize the ipinfo handler with the token
     handler = ipinfo.getHandler(token)
     
@@ -88,7 +90,7 @@ if __name__ == "__main__":
        info = get_user_info_by_ip(ip_to_query, access_token)
     
        for key, value in info.items():
-           print(f"{key}: {value}")
+           print(f"\n\033[92;1m{key}\033[0m: {value}")
 
     except:
          print(colorama.Fore.RED + "\nSome Error Occured")
