@@ -12,6 +12,7 @@ logo = """
                ╚██████╔╝╚███╔███╔╝███████║     ██╔╝ ██╗ 
                 ╚═════╝  ╚══╝╚══╝ ╚══════╝     ╚═╝  ╚═╝ 
 
+                
 """
 
 red = "\033[91;1m"
@@ -35,7 +36,7 @@ def anime(text):
 golo = colorama.Fore.YELLOW + logo
 anime(golo)
 
-sp = ">> Script By Shantanu <<"
+sp = ">> Script By Shantanu <<\n"
 name = f"\t\t       {colorama.Back.RED + colorama.Fore.WHITE}{sp}"
 anime(name)
 print(colorama.Back.RESET)
